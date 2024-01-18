@@ -3,6 +3,7 @@
     padding:0;
 }
 
+
 .heroPage{
     background: linear-gradient(2deg, #100F1A -40.48%, #2E2B43 98.41%);
     width: 1263px;
@@ -176,6 +177,17 @@ height: 154px
     border-radius: 12px;  
     width: 430px;
 }
+.sectionFour{
+    display: flex;
+    width: 1110px;
+    height: 674px;
+    padding: 48px;
+    align-items: center;
+    gap: 150px;
+    flex-shrink: 0;
+    border-radius: 60px;
+  
+}
 .countainerFour{
     display: flex;
     height: 965px;
@@ -323,18 +335,7 @@ flex-direction: column;
 align-items: flex-start;
 gap: 10px;
 }
-.sectionFour{
-    display: flex;
-    width: 1110px;
-    height: 674px;
-    padding: 48px;
-    align-items: center;
-    gap: 36px;
-    flex-shrink: 0;
-    border-radius: 60px;
-backdrop-filter: blur(10px);
 
-}
 .containerSection4{
     display: flex;
     max-width: 500px;
@@ -592,7 +593,7 @@ align-self: stretch;
 }
 .sectionAddedTwo{
 display: flex;
-
+position: relative;
 width: 1160px;
 height: 500px;
 padding: 48px;
@@ -603,6 +604,7 @@ border-radius: 60px;
 backdrop-filter: blur(10px);
 }
 .ControleWeb{
+
     display: flex;
 max-width: 450px;
 padding: 21px 48px;
@@ -610,14 +612,20 @@ flex-direction: column;
 align-items: flex-start;
 gap: 40px;
 flex: 1 0 0;
+
+
+border-radius: 60px;
+backdrop-filter: blur(10px);
 }
 
 .pikBackground{
-width: 353.6px;
-height:550px;
+    position: relative;
+    display: inline-block;
+width: 370px;
+height:530px;
 flex-shrink: 0;
 border-radius: 9.6px;
-background: #D34AF6;
+background: #D34AF6; 
 }
 .controleWebTitle{
     color: var(--base, #FFF);
@@ -656,4 +664,90 @@ line-height: normal;
 padding: 0px 48px;
 gap: 10px;
 align-self: stretch;
+}
+
+
+
+
+.DoughnutCard{
+    opacity: 0;
+    visibility: hidden;
+    position:absolute;
+    width: 224px;
+    height: 300px;
+    right:590px;
+    top:40px;
+    z-index: 10;
+    transition: all 0.5s ease; 
+
+}
+    .DoughnutCardTransition{
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(290px);  
+        
+    }   
+.earningCard{
+ opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 140px;
+    bottom: -230px;
+    width: 330px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 11.941px;
+    background: #2E2B43;
+    transition: all 0.5s ease; 
+    z-index: 10;
+}
+  
+    .earnigCardTransition{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-270px);    
+    }
+
+
+
+
+
+    .visitorCard {
+        opacity: 0;
+        visibility: hidden;
+           position: absolute;
+           right: 0px;
+           top: 40px;
+           width: 224px;
+           height: 300px;
+           transition: all 0.5s ease; 
+           z-index: 10;
+              }
+              
+    .visitorCardTransition{
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-90px);
+      
+    }
+   .second-container-section-four{
+    position: relative;
+    background-color: green;
+    width: 500px;
+    height: 450px;
+   }
+   .search-Engine-image{
+  position: absolute;
+ top:4300px;
+  width:500px;
+  height:450px;
+  right: 250px;
+
+   }
+.Pink-Image{
+    position: absolute;
+}
+
+.search-Engine-image-transition{
+    
 }

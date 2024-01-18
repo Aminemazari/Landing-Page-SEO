@@ -1,4 +1,7 @@
 import React from 'react'
+import { useInView } from 'react-intersection-observer'
+import classNames from 'classnames'
+import { useState } from 'react'
 import "./style/index.css"
 import Navbar from '../navbar/navbar'
 import imagOne from "./assets/imagONE.svg"
@@ -28,8 +31,25 @@ import fast from "./assets/fast.svg"
 import security from "./assets/security.svg"
 import archive from "./assets/archive.svg"
 import cpu from "./assets/cpu.svg"
-
+import visitorCard from "./assets/visitor.svg"
+import earningCard from "./assets/expected earning.svg"
+import DoughnutCard from "./assets/Doughnut.svg"
+import PinkImage from "./assets/pinkImage.svg"
+import SearchEnginImage from "./assets/search-engine-marketing-concept 1.svg"
 const seo = () => {
+   const [ref, inView] = useInView();
+   const visitorCardClass= classNames("visitorCard",{
+      'visitorCardTransition':inView
+   });
+   const earningCardClass=classNames('earningCard',{
+      "earnigCardTransition":inView
+   });
+   const DoughnutCardClass=classNames('DoughnutCard',{
+      "DoughnutCardTransition":inView
+   })
+
+
+
   return (
     <div className='heroPage'>
     <img src={Torus} className='TorusImag'/>
@@ -108,18 +128,26 @@ const seo = () => {
      </div>
     </section>
    <section className='sectionAddedTwo'>
-      <div className='ControleWeb'>
-         
+
+             <img src={earningCard} className={earningCardClass}/>
+
+            <img src={DoughnutCard} className={DoughnutCardClass} />
+            <img src={visitorCard} className={visitorCardClass} />
+
+      <div className='ControleWeb' >
          <h1 className='controleWebTitle'>Control Your Web Destiny with a Click</h1>
          <p className='controleWebParagraph'>Access all your tools with a simple click. Instantly check your site's performance on our user-friendly dashboard. Get quick access to reports, monitors, and powerful analysis tools.</p>
           <button className='big_CTA_button '>GET STARTED</button>
       </div>
-         <div className='pikBackground'>
-     
+      <div  className='pikBackground' ref={ref}>
       </div>
    </section>
 
      <section className='sectionFour'>
+
+     <img src={PinkImage} className={"Pink-Image"}  />
+     <img src={SearchEnginImage} className={"search-Engine-image"}  />
+
       <div className='containerSection4'>
          <div className='sectionfourTitleCountainer'>
             <h1 className='sectionFourTile'>Optimize Your <span className='sectionfourTitlePink'>Web Site Impression</span></h1>
@@ -142,15 +170,13 @@ const seo = () => {
      <button className='big_CTA_button'>GET STARTED</button>
      </div>
      </div>
-
-     <div>
-      
+     <div className='second-container-section-four'>
      </div>
      </section>
 
      <section className='sectionFive'>
     
-    <h1>starrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrherererererererererererereer</h1>
+    
       <h1 className='sectionFiveTitle'>Available <span className='sectionFiveTitle2'>pricing plans</span> based on your needs</h1>
       <div className='countainerOneSectionFive'>
          <div className='countainerDefaultFree'>
